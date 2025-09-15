@@ -262,27 +262,26 @@
   }
 
   .center-img img {
-    max-width: 370px;
+    max-width: 770px;
   }
 
 
-  .whatsapp-icon {
+.whatsapp-icon {
     position: absolute;
-    bottom: 249px;
-    left: 47%;
+    bottom: 284px;
+    left: 45%;
     transform: translateX(-50%);
     z-index: 3;
 }
-
   .whatsapp-icon img {
-    width: 37px
+    width: 41px
   }
 
   
   .voice-bar {
     position: absolute;
     top: 24px;
-    left: 33%;
+    left: 31%;
     transform: translateX(-50%);
     z-index: 3;
 }
@@ -294,26 +293,26 @@
  
   .bubble-left {
     position: absolute;
-    left: 27%;
-    bottom: 55%;
+    left: 23%;
+    bottom: 48%;
     z-index: 3;
-  }
+}
 
   .bubble-left img {
-    width: 238px;
+    width: 295px;
   }
 
  
   .bubble-right {
     position: absolute;
-    right: 26%;
-    bottom: 76%;
+    right: 22%;
+    bottom: 69%;
     z-index: 3;
-  }
+}
 
   .bubble-right img {
-    width: 220px;
-  }
+    width: 295px;
+}
 
   /* Side Icons */
   .icon-bubble {
@@ -343,7 +342,7 @@
 
   .stats-box {
     position: absolute;
-    bottom: 35%;
+    bottom: 31%;
     right: 16%;
     background: #fff9c1;
     color: #5c5c5c;
@@ -351,7 +350,7 @@
     border-radius: 15px;
     text-align: center;
     z-index: 3;
-  }
+}
 
   /* hero section END css */
 
@@ -366,6 +365,7 @@
     .stats-box,
     .whatsapp-icon {
       display: none !important;
+      
     }
 
     .bg-circle {
@@ -376,6 +376,9 @@
       width: 765px;
       z-index: 1;
     }
+    .center-img img {
+    max-width: 444px;
+}
   }
 
   /* hero section media querry END*/
@@ -456,3 +459,26 @@
 }
 
 /* curved underline END Your Groups on Whatsapp  */
+
+
+.side-btn {
+    position: fixed;
+    top: 64%;
+    right: -37px;
+    transform: translateY(-150%) rotate(90deg);
+    background: #000;
+    color: #fff;
+    padding: 18px 19px;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 1px 1px 10px 10px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: 0.4s ease;
+    border: solid 1px #ffffff;
+}
+
+.side-btn:hover {
+  background: #f4c542; 
+  color: #000;
+}
