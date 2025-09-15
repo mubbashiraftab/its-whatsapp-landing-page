@@ -386,7 +386,7 @@
 
 /* whatsupp icon flating effect START */
 
-  .whatsapp-icon {
+  .floating-img {
   animation: float 2s ease-in-out infinite;
 }
 
@@ -402,6 +402,17 @@
     transform: translateY(-12px);
   }
 }
+
+.floating-1{
+animation: float 2.5s ease-in-out infinite;
+
+}
+
+.floating-2{
+animation: float 2.3s ease-in-out infinite;
+
+}
+
 
 /* whatsupp icon flating effect END */
 
