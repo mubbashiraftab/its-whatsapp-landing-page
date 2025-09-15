@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAE LANDING PAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+
+
+</head>
+
+<style>
+    .trusted-section {
+        padding: 80px 0;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+    .trusted-section h6 {
+        color: #ccc;
+        font-size: 0.9rem;
+    }
+
+    .trusted-section h3 {
+        font-weight: bold;
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .swiper {
+        overflow: hidden;
+        padding-bottom: 60px;
+
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        background: #fff;
+        color: #000;
+        max-width: 432px;
+    }
+
+    .card-img-top {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Arrows ko bottom center laao */
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        background: #d1c900;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Arrows ko ek wrapper me center align */
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        display: inline-flex;
+    }
+
+    .swiper .swiper-button-next::after,
+    .swiper .swiper-button-prev::after {
+        font-size: 18px;
+        color: black;
+    }
+
+    /* Wrapper ko flex + center */
+    .swiper {
+        text-align: center;
+        padding-bottom: 70px;
+        /* arrows ke liye space */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        bottom: -20px;
+        /* arrows ko neeche shift karo */
+    }
+
+    /* Remove Dots */
+    .swiper-pagination {
+        display: none !important;
+    }
+</style>
+
+<body>
+    <!--Header Section Start -->
+    <header id="mainHeader" class="py-2 transparent-header">
+        <div class="mx-auto px-3" style="max-width: 1300px;">
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/LOGO.png" alt="Logo" style="height: 40px;">
+                </a>
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-4">
+                        <li class="nav-item mt-3">
+                            <a href="mailto:info@intellexal.com"
+                                class="nav-link small text-dark">info@intellexal.com</a>
+                        </li>
+                        <li class="nav-item pt-3">
+                            <a href="tel:+923111111111" class="nav-link small text-dark">+92 311 1111111</a>
+                        </li>
+                        <li class="nav-item pt-3">
+                            <!-- Button to open modal -->
+                            <button class="btn rounded-pill px-4 py-2 contact-btn" data-bs-toggle="modal"
+                                data-bs-target="#getInTouchModal">
+                                Get In Touch
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--Header Section End -->
+
+
+    <!-- Modal Start -->
+    <div class="modal fade" id="getInTouchModal" tabindex="-1" aria-labelledby="getInTouchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4" style="background-color: #fdf9e8; border-radius: 20px;">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-normal" id="getInTouchModalLabel">Get in Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body with Form -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control rounded-pill py-2 px-3" placeholder="Name*"
+                                    required>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="email" class="form-control rounded-pill py-2 px-3" placeholder="Email*"
+                                    required>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="tel" class="form-control rounded-pill py-2 px-3" placeholder="Phone*"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <textarea class="form-control rounded-4 py-3 px-3" rows="5"
+                                placeholder="Write a message here..." required></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-warning rounded-pill px-4">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+
+    <div class="text-center">
+        <p class="text-muted fs-3 pt-3 custom-font" data-aos="fade-up" data-aos-delay="100">
+            Boost brand accessibility across UAE
+        </p>
+        <h2 class="fw-bold fs-1 custom-font" data-aos="fade-up" data-aos-delay="200">
+            حتواصل مع عملائك بكل سهولة واحترافية
+        </h2>
+        <p class="text-muted pt-3 custom-font" data-aos="fade-up" data-aos-delay="300">
+            A platform specifically designed for the Gulf’s growing business needs. Deliver faster, smarter
+        </p>
+        <p class="text-muted pt-5 custom-font" data-aos="fade-up" data-aos-delay="400">
+            Whatsapp Business API integration UAE empowers your brand to connect faster, sell smarter and<br>
+            support customers 24/7
+        </p>
+    </div>
+
+    <section class="hero position-relative">
+
+        <div class="voice-bar" data-aos="fade-down" data-aos-delay="100">
+            <img src="images/audio.png" alt="Voice Bar">
+        </div>
+
+        <img src="images/bgcircle.png" alt="Background Circle" class="bg-circle" data-aos="zoom-in"
+            data-aos-delay="200">
+
+        <div class="center-img" data-aos="zoom-in" data-aos-delay="300">
+            <img src="images/arabicman.png" alt="Person">
+
+            <div class="whatsapp-icon" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/whatsapp (10).png" alt="WhatsApp">
+            </div>
+        </div>
+
+        <div class="bubble-left" data-aos="fade-right" data-aos-delay="600">
+            <img src="images/shop.png" alt="Shop Now Bubble">
+        </div>
+
+        <div class="bubble-right" data-aos="fade-left" data-aos-delay="700">
+            <img src="images/text.png" alt="Delivery Bubble">
+        </div>
+
+        <div class="stats-box text-start" data-aos="fade-up" data-aos-delay="800">
+            <img class="pb-5" src="images/user.png" alt="">
+            <h3 class="">03B+</h3>
+            <p class="">Users across the globe</p>
+        </div>
+
+    </section>
+
+
+
+
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+
+            <!-- Left Column (Image) -->
+            <div class="col-md-6 mb-4 mb-md-0" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="images/voice.png" alt="Group Image" class="img-fluid img-rounded w-100"
+                    style="display:block; transition: all 0.7s ease;"
+                    onmouseover="this.style.transform='translateY(-15px) scale(1.05)'; this.style.boxShadow='none';"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+            </div>
+
+            <!-- Right Column (Text + Button) -->
+            <div class="col-md-6">
+                <h2 class="fw-normal fs-1 custom-font" data-aos="fade-left" data-aos-delay="100">
+                    Your Groups on<br>
+                    <span class="highlight-word">Whatsapp
+                        <svg class="underlines" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20 Q 100 0 190 20" />
+                        </svg>
+                    </span>
+                </h2>
+
+
+                <p class="mt-3 custom-font" data-aos="fade-left" data-aos-delay="300">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.
+                </p>
+
+                <!-- Modal Trigger Button -->
+                <button class="btn-yellow mt-3" data-aos="fade-up" data-aos-delay="500" data-bs-toggle="modal"
+                    data-bs-target="#getInTouchModal">
+                    Get in Touch
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid py-5 conversation-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left Column (Heading + Paragraph + Button) -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="fw-normal custom-font fs-1" data-aos="fade-right" data-aos-delay="100">
+                        Keep the <br>
+                        <span class="highlight-word">
+                            Conversation Going
+                            <svg class="underline" viewBox="0 0 220 40" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 25 C 70 -5, 150 -5, 210 25" />
+                            </svg>
+                        </span>
+                    </h2>
+
+                    <p class="mt-3 custom-font" data-aos="fade-right" data-aos-delay="300">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form,
+                        by injected humour, or randomised words which don't look even slightly believable.
+                    </p>
+
+                    <!-- Modal Trigger Button -->
+                    <button class="btn-yellow mt-3" data-aos="fade-up" data-aos-delay="500" data-bs-toggle="modal"
+                        data-bs-target="#getInTouchModal">
+                        Get in Touch
+                    </button>
+                </div>
+
+                <!-- Right Column (Image) -->
+                <div class="col-md-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/keep.png" alt="Chatting Image" class="img-fluid img-rounded"
+                        style="display:block; transition: all 0.4s ease;"
+                        onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='none';"
+                        onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <section class="trusted-section mt-5 mb-5">
+        <div class="container-fluid">
+            <!-- Section Heading -->
+            <div class="mb-5 text-center pt-5 " data-aos="fade-up" data-aos-duration="800">
+                <h6 class="text-white custom-font">Why Top Gulf Brands Trust Us</h6>
+                <h1 class="custom-font fs-1">لأنّ التواصل الذكي يبدأ من هنا</h1>
+            </div>
+
+            <div class="swiper mySwiper pt-5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+                        <div class="card" style="transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0px 8px 20px rgba(0,0,0,0.15)';"
+                            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+
+                            <img src="images/official.png" class="card-img-top" alt="WhatsApp API">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Official WhatsApp Business API Provider</h6>
+                                <p class="small">Your direct access to verified, and secure customer conversations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                        <div class="card" style="transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0px 8px 20px rgba(0,0,0,0.15)';"
+                            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                            <img src="images/100%.png" class="card-img-top" alt="Data Security" />
+                            <div class="card-body">
+                                <h6 class="fw-bold">100% Data Security</h6>
+                                <p class="small">Fully aligned with Gulf region regulations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+                        <div class="card" style="transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0px 8px 20px rgba(0,0,0,0.15)';"
+                            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                            <img src="images/arabic.png" class="card-img-top" alt="Arabic Support" />
+                            <div class="card-body">
+                                <h6 class="fw-bold">Arabic Language Support</h6>
+                                <p class="small">Your direct access to verified, and secure customer conversations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+                        <div class="card" style="transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0px 8px 20px rgba(0,0,0,0.15)';"
+                            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                            <img src="images/aipowered.png" class="card-img-top" alt="AI Chatbots" />
+                            <div class="card-body">
+                                <h6 class="fw-bold">AI-Powered Smart Chatbots</h6>
+                                <p class="small">Automate FAQs, bookings, and support with human-like responses.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+                        <div class="card" style="transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0px 8px 20px rgba(0,0,0,0.15)';"
+                            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                            <img src="images/allinone.png" class="card-img-top" alt="Omni Channel" />
+                            <div class="card-body">
+                                <h6 class="fw-bold">All-in-One Omni Channel Platform</h6>
+                                <p class="small">Centralize customer conversations across WhatsApp, SMS, Voice,
+                                    Instagram, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation arrows -->
+                <div class="swiper-button-prev mt-5"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container py-5">
+        <!-- Headings -->
+        <div class="text-center mb-5">
+            <p class="custom-font mb-1" data-aos="fade-up" data-aos-delay="100">
+                Whether you’re in retail, logistics, healthcare, or banking,<br>
+                our solutions are built to help you:
+            </p>
+            <h2 class="fw-bold fs-1 custom-font" data-aos="fade-up" data-aos-delay="300">
+                حلول متكاملة لبناء علاقات أقوى مع عملائك
+            </h2>
+        </div>
+
+        <!-- Main Row -->
+        <div class="row align-items-center">
+
+            <!-- Left Column (Image) -->
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+                <div class="position-relative">
+                    <img src="images/demo.png" alt="Product Demo" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-7">
+                <div class="features">
+
+                    <!-- Feature 1 -->
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                        data-aos="fade-left" data-aos-delay="100">
+                        <div><img src="images/gift.png" alt="Icon" width="50"></div>
+                        <div class="flex-grow-1 px-3">
+                            <h6 class="fw-normal mb-0 custom-font">Send Order Updates</h6>
+                        </div>
+                        <div class="text-muted custom-font" style="max-width: 50%;">
+                            It is a long established fact that a reader will be distracted by the readable content.
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                        data-aos="fade-left" data-aos-delay="200">
+                        <div><img src="images/gift.png" alt="Icon" width="50"></div>
+                        <div class="flex-grow-1 px-3">
+                            <h6 class="fw-normal mb-0 custom-font">Enable Secure Transactions</h6>
+                        </div>
+                        <div class="text-muted" style="max-width: 50%;">
+                            It is a long established fact that a reader will be distracted by the readable content.
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                        data-aos="fade-left" data-aos-delay="300">
+                        <div><img src="images/gift.png" alt="Icon" width="50"></div>
+                        <div class="flex-grow-1 px-3">
+                            <h6 class="fw-normal mb-0 custom-font">Automate Customer Support</h6>
+                        </div>
+                        <div class="text-muted" style="max-width: 50%;">
+                            It is a long established fact that a reader will be distracted by the readable content.
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                        data-aos="fade-left" data-aos-delay="400">
+                        <div><img src="images/gift.png" alt="Icon" width="50"></div>
+                        <div class="flex-grow-1 px-3">
+                            <h6 class="fw-normal mb-0 custom-font">Engage 24/7 via WhatsApp, SMS & more</h6>
+                        </div>
+                        <div class="text-muted custom-font" style="max-width: 50%;">
+                            It is a long established fact that a reader will be distracted by the readable content.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Text + Highlight Box -->
+                <div class="d-flex justify-content-between align-items-end mt-5 flex-wrap">
+                    <p class="text-muted small mb-0 fs-6 custom-font" style="max-width: 40%;" data-aos="fade-up"
+                        data-aos-delay="500">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form.
+                    </p>
+                    <div class="bg-warning bg-opacity-25 rounded-5 text-start px-4 py-3 text-start" data-aos="zoom-in"
+                        data-aos-delay="600">
+                        <img class="mb-2" src="images/user.png" width="32" alt="Users">
+                        <h4 class="fw-bold mb-0">03B+</h4>
+                        <small class="text-muted">Users across the globe</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container my-5">
+        <div
+            class="bg-dark text-white rounded-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+            <!-- Left Column -->
+            <div class="col-md-6 mb-4 p-5 mb-md-0" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="fw-bold custom-font">Ready to Transform How<br> You Connect?</h3>
+                <p class="mb-4 fs-3 custom-font">دعنا نساعدك في تعزيز تجربة عملائك</p>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <!-- ✅ Modal Trigger -->
+                    <a href="#" class="btn btn-warning text-dark px-4 py-2 fw-semibold rounded-pill custom-font"
+                        data-bs-toggle="modal" data-bs-target="#getInTouchModal">
+                        Book a Free Demo
+                    </a>
+
+                    <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold rounded-pill">
+                        Get a Customized Quote
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="row row-cols-2 g-3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="100">
+                        <h5 class="fw-bold mb-0 fs-2">03B+</h5>
+                        <small class="text-white-50">Users across the globe</small>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="fw-bold mb-0 fs-2">03B+</h5>
+                        <small class="text-white-50">Users across the globe</small>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-delay="300">
+                        <h5 class="fw-bold mb-0 fs-2">03B+</h5>
+                        <small class="text-white-50">Users across the globe</small>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-delay="400">
+                        <h5 class="fw-bold mb-0 fs-2">03B+</h5>
+                        <small class="text-white-50">Users across the globe</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Images) -->
+            <div class="col-md-6 text-start position-relative pt-5" data-aos="fade-left" data-aos-duration="1200">
+                <!-- Man image -->
+                <img src="images/humen.png" alt="Man with Tablet" class="img-fluid rounded">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="faq-section-bg py-5">
+        <div class="container p-4 rounded-4">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="fw-bold custom-font">Got Questions About WhatsApp Business Integration?</h2>
+                <p class="text-muted custom-font fs-3">كل استفساراتك في مكان واحد</p>
+            </div>
+
+            <!-- Row with Image and Accordion -->
+            <div class="row align-items-start">
+
+                <!-- Left Column: Image -->
+                <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="images/faq.png" alt="FAQ Help Image" class="img-fluid">
+                </div>
+
+                <!-- Right Column: Accordion -->
+                <div class="col-md-7">
+                    <div class="accordion custom-accordion" id="faqAccordion">
+
+                        <!-- Item 1 -->
+                        <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="100"
+                            data-aos-duration="800">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What is WhatsApp Business API, and how is it different from the WhatsApp app?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The WhatsApp Business API is built for medium to large businesses. Unlike the mobile
+                                    app, it allows
+                                    automated messaging, multi-agent access, CRM integration, and real-time analytics.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="200"
+                            data-aos-duration="800">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Is the WhatsApp Business API approved for use in the UAE and Gulf countries?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, the WhatsApp Business API is approved and widely used across the UAE and Gulf
+                                    region.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-duration="800">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I send messages in both Arabic and English?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! WhatsApp Business API supports multilingual messaging including Arabic
+                                    and English.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Do you offer chatbot support and automation?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, chatbot integration and automation are included in our solutions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Can I send messages in both Arabic and English?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, chatbot integration and automation are included in our solutions.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="mx-auto"
+                style="max-width: 1000px; background-color: #fdf9e8; border-radius: 20px; padding: 3rem 2rem;">
+
+                <!-- Heading -->
+                <div class="text-center mb-4">
+                    <h2 class="fw-normal mb-2 custom-font">
+                        Get in
+                        <span class="position-relative d-inline-block">
+                            Touch
+                            <span class="position-absolute start-0 bottom-0 w-100"
+                                style="height: 6px; background-color: #e6c800; border-radius: 50% 50% 0 0; z-index: -1;"></span>
+                        </span>
+                    </h2>
+                    <p class="text-muted small custom-font ">Got Questions About WhatsApp Business Integration?</p>
+                </div>
+
+                <!-- Contact Form -->
+                <form>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control rounded-pill input-no-border py-2 px-3"
+                                placeholder="Name*" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control rounded-pill input-no-border py-2 px-3"
+                                placeholder="Email*" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="tel" class="form-control rounded-pill input-no-border py-2 px-3"
+                                placeholder="Phone*" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea class="form-control rounded-4 input-no-border py-3 px-3" rows="5"
+                            placeholder="Write a message here..." required></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-warning rounded-pill px-4">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-dark text-light py-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo Section -->
+            <div class="d-flex align-items-center mb-3 mb-md-0">
+                <img src="images/footer (2).png" alt="Intellexal Solutions Logo" style="max-height: 40px;">
+            </div>
+
+            <!-- Copyright Text -->
+            <div class="text-center text-md-end custom-font" style="font-size:12px; font-weight:400;">
+                Copyrights 2025, Intellexal Solutions. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="js/slider.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 }
+            }
+        });
+
+
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 900,
+            once: false,
+        });
+    </script>
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.getElementById("mainHeader");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+
+</html>
